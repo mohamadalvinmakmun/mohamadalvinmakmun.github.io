@@ -54,21 +54,29 @@
                  border-radius: 30px;
                  margin-top: 10px;
                  display: flex;
-                 justify-content: center;            
+                 justify-content: center;         
              }
      
              section.smk {
-                 background: url(biru\ wkwk.jpeg);
+                  background: url(biru\ wkwk.jpeg);
                  background-size: cover;
                  border-radius: 50px;
                  box-shadow: 0 0 25px #ffffff;
                  background-size: 500px; width: 400px; height: 400px; align-content: center;
-                 margin: 40px auto;
+                 margin: 30px auto;
                  display: flex;
                  justify-content: center;
                  flex-direction: column;
                  align-items: center;
                  
+             }
+
+             img#smk {
+                 border: solid 5px rgb(255, 255, 255);
+                 border-radius: 30px;
+                 margin-top: 10px;
+                 display: flex;
+                 justify-content: center;  
              }
      
              img#smk {
@@ -104,6 +112,38 @@
      pre {
          color: #ffffff;
      }
+     /* Light Mode */
+.foto-wrapper {
+  width: 470px;
+  height: 470px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.foto-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #d1d5db;
+}
+
+/* Dark Mode */
+body.dark .foto-wrapper {
+  background-color: #1e293b;
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.25);
+}
+
+body.dark .foto-wrapper img {
+  border: 5px solid #14b8a6;
+}
              </style>
   </head>
   <body>
@@ -177,7 +217,9 @@
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:mt-9">
-              <img src="foto alvin.jpeg" alt="Sandhika Galih" class="max-w-md" />
+              <div class="foto-wrapper">
+  <img src="foto alvin.jpeg" alt="Foto Alvin" class="foto-alvin" />
+</div>
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
                 
                   <path
@@ -201,7 +243,7 @@
           <div class="mb-10 w-full px-4 lg:w-1/2">
             <h4 class="mb-3 text-lg font-bold uppercase text-primary">Tentang Saya</h4>
             <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Yuk, belajar web programming!</h2>
-            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Koding itu seperti pacaran, kadang error, kadang berhasil, tapi tetap bikin nagih!"</p>
+            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Coding itu seperti pacaran, kadang error, kadang berhasil, tapi tetap bikin nagih!"</p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
             <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Mari berteman</h3>
@@ -284,41 +326,72 @@
             </p>
           </div>
         </div>
-
-        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-          <div class="mb-12 p-4 md:w-1/2">
-            <section class="sdn1 p-4">
-              <p id="sekolah">SDN KUTABUMI 1 TANGERANG</p>
-      <img id="sdn1" src="sdn kutabumi 1 tangerang.jfif" alt="SDN KUTABUMI 1" width="250px" height="230px">
-      <pre align="">Master of Lari Tercepat Pas Dengar Bel Pulang</pre>
-          </section>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Landing Page Sandhika Galih</h3>
-            <p class="text-base font-medium text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, iusto! Aliquam, corporis.</p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/2.png" alt="E-Commerce" width="w-full" />
-            </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">E-Commerce</h3>
-            <p class="text-base font-medium text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, iusto! Aliquam, corporis.</p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/3.png" alt="Technical Documentation" width="w-full" />
-            </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Technical Documentation</h3>
-            <p class="text-base font-medium text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, iusto! Aliquam, corporis.</p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/4.png" alt="Tribute Page" width="w-full" />
-            </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Tribute Page</h3>
-            <p class="text-base font-medium text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, iusto! Aliquam, corporis.</p>
-          </div>
-        </div>
-      </div>
+<div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+  <!-- SDN Section -->
+  <div class="mb-12 p-4 md:w-1/2">
+    <section class="sdn1 p-4">
+      <p id="sekolah">SDN KUTABUMI 1 TANGERANG</p><br>
+      <img id="sdn1" src="sdn kutabumi 1 tangerang.jfif" alt="SDN KUTABUMI 1" width="250px" height="220px"><br>
+      <pre align="center">Master of Lari Tercepat</pre>
+      <pre align="center">Pas Dengar Bel Pulang</pre>
     </section>
+    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white" style="text-align: center;">
+      SDN KUTABUMI 1 TANGERANG
+    </h3>
+    <p class="text-base font-medium text-secondary" style="text-align: center;">
+      Saya menempuh pendidikan dasar di SDN Kutabumi 1 dari tahun 2012 hingga 2018, di mana saya mulai membentuk fondasi pengetahuan dan karakter.
+    </p>
+  </div>
+
+  <!-- MTS Section -->
+  <div class="mb-12 p-4 md:w-1/2">
+    <section class="mts p-4">
+      <p id="sekolah">MTS RIHLATUT THULLAB</p><br>
+      <img id="mts" src="mts.jpg" alt="MTS RIHLATUT THULLAB" width="250px" height="230px"><br>
+      <pre align="center">Paling Khusyuk di Musholla</pre>
+      <pre align="center">Kalau Lagi Nunggu Jadwal Jemputan Pulang</pre>
+    </section>
+    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white" style="text-align: center;">
+      MTS RIHLATUT THULLAB
+    </h3>
+    <p class="text-base font-medium text-secondary" style="text-align: center;">
+      Saya menempuh pendidikan menengah di MTS Rihlatut Thullab dari tahun 2018 hingga 2021, di mana saya mulai mengembangkan minat dan bakat di bidang akademis dan non-akademis.
+    </p>
+  </div>
+</div>
+          <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+  <!-- SMK Section -->
+  <div class="mb-12 p-4 md:w-1/2">
+    <section class="smk p-4">
+      <p id="sekolah">SMK KUSUMA BANGSA</p><br>
+      <img id="smk" src="smk.jpg" alt="SMK KUSUMA BANGSA" class="w-full max-w-[250px] mx-auto"><br>
+      <pre align="center">Paling Khusyuk di Musholla</pre>
+      <pre align="center">Kalau Lagi Nunggu Jadwal Jemputan Pulang</pre>
+    </section>
+    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white text-center">
+      SMK KUSUMA BANGSA
+    </h3>
+    <p class="text-base font-medium text-secondary text-center">
+      Saya menempuh pendidikan di SMK Kusuma Bangsa dengan jurusan Multimedia, di mana saya mulai fokus mengembangkan keterampilan kreatif dan teknis di dunia digital.
+    </p>
+  </div>
+
+  <!-- Poltek Section -->
+  <div class="mb-12 p-4 md:w-1/2">
+    <section class="poltekgt p-4">
+      <p id="sekolah">POLTEK GAJAH TUNGGAL</p><br>
+      <img id="poltekgt" src="poltek.jpg" alt="POLTEK GAJAH TUNGGAL" class="w-full max-w-[250px] mx-auto"><br>
+      <pre align="center">Paling Khusyuk di Musholla</pre>
+      <pre align="center">Kalau Lagi Nunggu Jadwal Jemputan Pulang</pre>
+    </section>
+    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white text-center">
+      POLTEK GAJAH TUNGGAL
+    </h3>
+    <p class="text-base font-medium text-secondary text-center">
+      Saya menempuh pendidikan di Politeknik Gajah Tunggal, jurusan Teknologi Informasi, dan mulai mendalami sistem digital serta pemrograman untuk kebutuhan industri.
+    </p>
+  </div>
+</div>
     <!-- Portfolio Section End -->
 
     <!-- Clients Section Start -->
