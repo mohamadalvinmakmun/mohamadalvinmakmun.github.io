@@ -15,135 +15,71 @@
     </script>
     
     <style>
-      section.sdn1 {
-                 background: url(biru\ wkwk.jpeg);
-                 background-size: cover;
-                 border-radius: 50px;
-                 box-shadow: 0 0 25px #ffffff;
-                 background-size: 500px; width: 400px; height: 400px; align-content: center;
-                 margin: 30px auto;
-                 display: flex;
-                 justify-content: center;
-                 flex-direction: column;
-                 align-items: center;
-             }
+     /* Gabungkan semua style section untuk efisiensi */
+      section.sdn1,
+      section.mts,
+      section.smk,
+      section.poltekgt {
+        background: url(biru\ wkwk.jpeg);
+        background-size: cover;
+        border-radius: 50px;
+        box-shadow: 0 0 25px #ffffff;
+        align-content: center;
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem; /* Ruang di dalam kotak */
+      }
      
-             img#sdn1 {  
-                 border: solid 5px rgb(255, 255, 255);
-                 border-radius: 30px;
-                 margin-top: 10px;
-                 display: flex;
-                 justify-content: center;
-             }
+      img#sdn1,
+      img#mts,
+      img#smk,
+      img#poltekgt {
+        border: solid 5px rgb(255, 255, 255);
+        border-radius: 30px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        width: 250px; /* Ukuran gambar tetap, tapi akan responsif karena dibungkus */
+        height: auto;
+      }
      
-             section.mts {
-                 background: url(biru\ wkwk.jpeg);
-                 background-size: cover;
-                 border-radius: 50px;
-                 box-shadow: 0 0 25px #ffffff;
-                 background-size: 500px; width: 400px; height: 400px; align-content: center;
-                 margin: 30px auto;
-                 display: flex;
-                 justify-content: center;
-                 flex-direction: column;
-                 align-items: center;
-             }
-     
-             img#mts {
-                 border: solid 5px rgb(255, 255, 255);
-                 border-radius: 30px;
-                 margin-top: 10px;
-                 display: flex;
-                 justify-content: center;         
-             }
-     
-             section.smk {
-                  background: url(biru\ wkwk.jpeg);
-                 background-size: cover;
-                 border-radius: 50px;
-                 box-shadow: 0 0 25px #ffffff;
-                 background-size: 500px; width: 400px; height: 400px; align-content: center;
-                 margin: 30px auto;
-                 display: flex;
-                 justify-content: center;
-                 flex-direction: column;
-                 align-items: center;
-                 
-             }
+      p#sekolah, pre {
+        color: #ffffff;
+        text-align: center;
+      }
 
-             img#smk {
-                 border: solid 5px rgb(255, 255, 255);
-                 border-radius: 30px;
-                 margin-top: 10px;
-                 display: flex;
-                 justify-content: center;  
-             }
-     
-             img#smk {
-                 border: solid 5px rgb(255, 255, 255);
-                 border-radius: 30px;
-                 margin-top: 10px;
-                 display: flex;
-                 justify-content: center;  
-             }
-     
-             section.poltekgt {
-                 background: url(biru\ wkwk.jpeg);
-                 background-size: cover;
-                 border-radius: 50px;
-                 box-shadow: 0 0 25px #ffffff;
-                 background-size: 500px; width: 400px; height: 400px; align-content: center;
-                 margin: 30px auto;
-                 display: flex;
-                 justify-content: center;
-                 flex-direction: column;
-                 align-items: center;
-             }
-             img#poltekgt {
-                 border: solid 5px rgb(255, 255, 255);
-                 border-radius: 30px;
-                 margin-top: 10px;
-                 display: flex;
-                 justify-content: center;  
-             }
-     p#sekolah {
-         color: #ffffff;
-     }
-     pre {
-         color: #ffffff;
-     }
-     /* Light Mode */
-.foto-wrapper {
-  width: 470px;
-  height: 470px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #f3f4f6;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  margin: 50px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.foto-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #d1d5db;
-}
-
-/* Dark Mode */
-body.dark .foto-wrapper {
-  background-color: #1e293b;
-  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.25);
-}
-
-body.dark .foto-wrapper img {
-  border: 5px solid #14b8a6;
-}
+      /* Light Mode */
+      .foto-wrapper {
+        width: 470px;
+        height: 470px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #f3f4f6;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+      .foto-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #d1d5db;
+      }
+      /* Dark Mode */
+      body.dark .foto-wrapper {
+        background-color: #1e293b;
+        box-shadow: 0 8px 24px rgba(20, 184, 166, 0.25);
+      }
+      body.dark .foto-wrapper img {
+        border: 5px solid #14b8a6;
+      }
              </style>
   </head>
   <body>
@@ -176,7 +112,7 @@ body.dark .foto-wrapper img {
                   <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Pendidikan</a>
                 </li>
                 <li class="group">
-                  <a href="#clients" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Clients</a>
+                  <a href="#clients" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Study</a>
                 </li>
                 <li class="group">
                   <a href="#blog" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Blog</a>
@@ -243,7 +179,7 @@ body.dark .foto-wrapper img {
           <div class="mb-10 w-full px-4 lg:w-1/2">
             <h4 class="mb-3 text-lg font-bold uppercase text-primary">Tentang Saya</h4>
             <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Yuk, belajar web programming!</h2>
-            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Coding itu seperti pacaran, kadang error, kadang berhasil, tapi tetap bikin nagih!"</p>
+            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">"Bug itu dosa digital, makin numpuk, makin susah taubatnya."</p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
             <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Mari berteman</h3>
@@ -326,72 +262,69 @@ body.dark .foto-wrapper img {
             </p>
           </div>
         </div>
-<div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-  <!-- SDN Section -->
-  <div class="mb-12 p-4 md:w-1/2">
-    <section class="sdn1 p-4">
-      <p id="sekolah">SDN KUTABUMI 1 TANGERANG</p><br>
-      <img id="sdn1" src="sdn kutabumi 1 tangerang.jfif" alt="SDN KUTABUMI 1" width="250px" height="220px"><br>
-      <pre align="center">Master of Lari Tercepat</pre>
-      <pre align="center">Pas Dengar Bel Pulang</pre>
-    </section>
-    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white" style="text-align: center;">
-      SDN KUTABUMI 1 TANGERANG
-    </h3>
-    <p class="text-base font-medium text-secondary" style="text-align: center;">
-      Saya menempuh pendidikan dasar di SDN Kutabumi 1 dari tahun 2012 hingga 2018, di mana saya mulai membentuk fondasi pengetahuan dan karakter.
-    </p>
-  </div>
+        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+          <div class="mb-12 p-4 md:w-1/2">
+            <section class="sdn1 p-4">
+              <p id="sekolah">SDN KUTABUMI 1 TANGERANG</p><br>
+              <img id="sdn1" src="sdn kutabumi 1 tangerang.jfif" alt="SDN KUTABUMI 1"><br>
+              <pre class="text-center">Master of Lari Tercepat</pre>
+              <pre class="text-center">Pas Dengar Bel Pulang</pre>
+            </section>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white text-center">
+              SDN KUTABUMI 1 TANGERANG
+            </h3>
+            <p class="text-base font-medium text-secondary text-center">
+              Saya menempuh pendidikan dasar di SDN Kutabumi 1 dari tahun 2012 hingga 2018, di mana saya mulai membentuk fondasi pengetahuan dan karakter.
+            </p>
+          </div>
 
-  <!-- MTS Section -->
-  <div class="mb-12 p-4 md:w-1/2">
-    <section class="mts p-4">
-      <p id="sekolah">MTS RIHLATUT THULLAB</p><br>
-      <img id="mts" src="mts.jpg" alt="MTS RIHLATUT THULLAB" width="250px" height="230px"><br>
-      <pre align="center">Paling Khusyuk di Musholla</pre>
-      <pre align="center">Kalau Lagi Nunggu Jadwal Jemputan Pulang</pre>
-    </section>
-    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white" style="text-align: center;">
-      MTS RIHLATUT THULLAB
-    </h3>
-    <p class="text-base font-medium text-secondary" style="text-align: center;">
-      Saya menempuh pendidikan menengah di MTS Rihlatut Thullab dari tahun 2018 hingga 2021, di mana saya mulai mengembangkan minat dan bakat di bidang akademis dan non-akademis.
-    </p>
-  </div>
-</div>
-          <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-  <!-- SMK Section -->
-  <div class="mb-12 p-4 md:w-1/2">
-    <section class="smk p-4">
-      <p id="sekolah">SMK KUSUMA BANGSA</p><br>
-      <img id="smk" src="smk.jpg" alt="SMK KUSUMA BANGSA" class="w-full max-w-[250px] mx-auto"><br>
-      <pre align="center">Paling Khusyuk di Musholla</pre>
-      <pre align="center">Kalau Lagi Nunggu Jadwal Jemputan Pulang</pre>
-    </section>
-    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white text-center">
-      SMK KUSUMA BANGSA
-    </h3>
-    <p class="text-base font-medium text-secondary text-center">
-      Saya menempuh pendidikan di SMK Kusuma Bangsa dengan jurusan Multimedia, di mana saya mulai fokus mengembangkan keterampilan kreatif dan teknis di dunia digital.
-    </p>
-  </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <section class="mts p-4">
+              <p id="sekolah">MTS RIHLATUT THULLAB</p><br>
+              <img id="mts" src="mts.jpg" alt="MTS RIHLATUT THULLAB"><br>
+              <pre class="text-center">Paling Khusyuk di Musholla</pre>
+              <pre class="text-center">Kalau Lagi Nunggu Jadwal Jemputan Pulang</pre>
+            </section>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white text-center">
+              MTS RIHLATUT THULLAB
+            </h3>
+            <p class="text-base font-medium text-secondary text-center">
+              Saya menempuh pendidikan menengah di MTS Rihlatut Thullab dari tahun 2018 hingga 2021, di mana saya mulai mengembangkan minat dan bakat di bidang akademis dan non-akademis.
+            </p>
+          </div>
 
-  <!-- Poltek Section -->
-  <div class="mb-12 p-4 md:w-1/2">
-    <section class="poltekgt p-4">
-      <p id="sekolah">POLTEK GAJAH TUNGGAL</p><br>
-      <img id="poltekgt" src="poltek.jpg" alt="POLTEK GAJAH TUNGGAL" class="w-full max-w-[250px] mx-auto"><br>
-      <pre align="center">Paling Khusyuk di Musholla</pre>
-      <pre align="center">Kalau Lagi Nunggu Jadwal Jemputan Pulang</pre>
+          <div class="mb-12 p-4 md:w-1/2">
+            <section class="smk p-4">
+              <p id="sekolah">SMK KUSUMA BANGSA</p><br>
+              <img id="smk" src="smk.jpg" alt="SMK KUSUMA BANGSA"><br>
+              <pre class="text-center">Bisa ngedit sambil rebahan</pre>
+              <pre class="text-center">walau hasilnya miring</pre>
+            </section>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white text-center">
+              SMK KUSUMA BANGSA
+            </h3>
+            <p class="text-base font-medium text-secondary text-center">
+              Saya menempuh pendidikan di SMK Kusuma Bangsa dengan jurusan Multimedia, di mana saya mulai fokus mengembangkan keterampilan kreatif dan teknis di dunia digital.
+            </p>
+          </div>
+
+          <div class="mb-12 p-4 md:w-1/2">
+            <section class="poltekgt p-4">
+              <p id="sekolah">POLTEK GAJAH TUNGGAL</p><br>
+              <img id="poltekgt" src="poltek.jpg" alt="POLTEK GAJAH TUNGGAL"><br><br>
+              <pre class="text-center">Ahli Menyelesaikan Masalah</pre>
+              <pre class="text-center">Yang Sebelumnya saya Bikin Sendiri</pre>
+            </section>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white text-center">
+              POLTEK GAJAH TUNGGAL
+            </h3>
+            <p class="text-base font-medium text-secondary text-center">
+              Saya menempuh pendidikan di Politeknik Gajah Tunggal, jurusan Teknologi Informasi, dan mulai mendalami sistem digital serta pemrograman untuk kebutuhan industri.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white text-center">
-      POLTEK GAJAH TUNGGAL
-    </h3>
-    <p class="text-base font-medium text-secondary text-center">
-      Saya menempuh pendidikan di Politeknik Gajah Tunggal, jurusan Teknologi Informasi, dan mulai mendalami sistem digital serta pemrograman untuk kebutuhan industri.
-    </p>
-  </div>
-</div>
     <!-- Portfolio Section End -->
 
     <!-- Clients Section Start -->
@@ -399,25 +332,22 @@ body.dark .foto-wrapper img {
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">Clients</h4>
-            <h2 class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl">Yang Pernah Bekerjasama</h2>
-            <p class="text-md font-medium text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit facilis velit!</p>
+            <h4 class="mb-2 text-lg font-semibold text-primary">Study</h4>
+            <h2 class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl">Perjalanan Saya Menjadi Developer</h2>
+            <p class="text-md font-medium text-secondary md:text-lg">Saya belajar coding supaya bisa bikin aplikasi, tapi yang jadi duluan malah stres dan kopi.</p>
           </div>
         </div>
 
         <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
             <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
-              <img src="dist/img/clients/google.svg" alt="Google" />
+              <img src="dist/img/clients/PHP-logo.svg" alt="PHP" />
             </a>
             <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
-              <img src="dist/img/clients/gojek.svg" alt="Gojek" />
+              <img src="dist/img/clients/java-ar21.svg" alt="Java" />
             </a>
             <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
-              <img src="dist/img/clients/tokopedia.svg" alt="Tokopedia" />
-            </a>
-            <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
-              <img src="dist/img/clients/traveloka.svg" alt="traveloka" />
+              <img src="dist/img/clients/Python-logo-notext.svg" alt="Python" />
             </a>
           </div>
         </div>
