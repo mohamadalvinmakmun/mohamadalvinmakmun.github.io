@@ -15,71 +15,151 @@
     </script>
     
     <style>
-     /* Gabungkan semua style section untuk efisiensi */
-      section.sdn1,
-      section.mts,
-      section.smk,
-      section.poltekgt {
-        background: url(biru\ wkwk.jpeg);
-        background-size: cover;
-        border-radius: 50px;
-        box-shadow: 0 0 25px #ffffff;
-        align-content: center;
-        margin: 30px auto;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem; /* Ruang di dalam kotak */
-      }
-     
-      img#sdn1,
-      img#mts,
-      img#smk,
-      img#poltekgt {
-        border: solid 5px rgb(255, 255, 255);
-        border-radius: 30px;
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        width: 250px; /* Ukuran gambar tetap, tapi akan responsif karena dibungkus */
-        height: auto;
-      }
-     
-      p#sekolah, pre {
-        color: #ffffff;
-        text-align: center;
-      }
+     /* ===================== */
+/* Style Section Sekolah */
+/* ===================== */
+section.sdn1,
+section.mts,
+section.smk,
+section.poltekgt {
+  background: url("biru wkwk.jpeg");
+  background-size: cover;
+  border-radius: 50px;
+  box-shadow: 0 0 25px #ffffff;
+  align-content: center;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem; /* Ruang di dalam kotak */
+}
 
-      /* Light Mode */
-      .foto-wrapper {
-        width: 470px;
-        height: 470px;
-        border-radius: 50%;
-        overflow: hidden;
-        background-color: #f3f4f6;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        margin: 50px auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
-      .foto-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 5px solid #d1d5db;
-      }
-      /* Dark Mode */
-      body.dark .foto-wrapper {
-        background-color: #1e293b;
-        box-shadow: 0 8px 24px rgba(20, 184, 166, 0.25);
-      }
-      body.dark .foto-wrapper img {
-        border: 5px solid #14b8a6;
-      }
+img#sdn1,
+img#mts,
+img#smk,
+img#poltekgt {
+  border: solid 5px rgb(255, 255, 255);
+  border-radius: 30px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: auto;
+}
+
+p#sekolah,
+pre {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ===================== */
+/* Foto Profil Wrapper   */
+/* ===================== */
+.foto-wrapper {
+  width: 470px;
+  height: 470px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  box-shadow: 0 8px 32px rgba(20, 184, 166, 0.3);
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.foto-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #14b8a6, #06b6d4, #8b5cf6);
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+.foto-wrapper img {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+/* ===================== */
+/* Dark Mode Adjustments */
+/* ===================== */
+body.dark .foto-wrapper {
+  background-color: #1e293b;
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.25);
+}
+body.dark .foto-wrapper img {
+  border: 5px solid #14b8a6;
+}
+
+/* ===================== */
+/* Responsif Mobile View */
+/* ===================== */
+@media screen and (max-width: 768px) {
+  .foto-wrapper {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  .foto-wrapper img {
+    border: 3px solid white;
+  }
+
+  section.sdn1,
+  section.mts,
+  section.smk,
+  section.poltekgt {
+    padding: 1rem;
+    margin: 15px auto;
+    width: 90%;
+  }
+
+  img#sdn1,
+  img#mts,
+  img#smk,
+  img#poltekgt {
+    width: 90%;
+    height: auto;
+  }
+
+  p#sekolah, pre {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .foto-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  section.sdn1,
+  section.mts,
+  section.smk,
+  section.poltekgt {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  p#sekolah, pre {
+    font-size: 12px;
+  }
+}
+
              </style>
   </head>
   <body>
@@ -394,7 +474,7 @@
               <img src="dist/img/hobi/traveling.jpg" alt="Coffee" class="w-full" />
               <div class="py-8 px-6">
                 <h3>
-                  <a href="#" class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Travelling</a>
+                  <a href="#" class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Adventure</a>
                 </h3>
                 <p class="mb-6 text-base font-medium text-secondary">Dompet kurus, galeri gemuk, dan memori penuh, bukan kenangan, tapi storage.</p>
               </div>
